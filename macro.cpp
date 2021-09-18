@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h> 
-#include <fstream> //manipulacçao de arquivo
+#include <fstream> //manipulaçao de arquivo
 #include <vector>
 
 using namespace std;
@@ -9,8 +9,6 @@ using namespace std;
 string nome = "teste_macro_z808.txt";
 
 int main(){
-      MacroProcessor macro;
-
       ifstream arquivoTeste;//abrir para leitura
       arquivoTeste.open(nome);
 
