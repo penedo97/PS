@@ -50,7 +50,7 @@ int main(){
 
 
     //string dados("macro.txt");
-    int p=0, q=0;
+    //int p=0, q=0;
 
     while(getline(input_file, line)){//le tudo linha a linha
         if(line.compare(0,9,"SomaMem V") == 0){ //cada vez q tiver somaMen V expande a macro
@@ -79,7 +79,7 @@ int main(){
             //var1 = aux;
             //cout << var1;
 
-           //int p=0, q=0;
+           int p=0, q=0;
 
 
             //pega as variaveis
@@ -97,7 +97,7 @@ int main(){
             // O ERRO TA NESSA PARTE
             //não ta armazenando em var1 e var2 ao sair do for
             //----------------------------------------------------------------------------
-            for(int i=espacosemps + 1; i<virgulina; i++){//variavel1
+           /* for(int i=espacosemps + 1; i<virgulina; i++){//variavel1
                 var1[p] = line.at(i);
                 p++;
             }
@@ -107,7 +107,7 @@ int main(){
                 var2[q] << line.at(i);
                 q++;
             }
-            var2[q]='\0';
+            var2[q]='\0';*/
             //----------------------------------------------------------------------------
 
             ifstream dados_macro("macro.txt"); //abre o macro para leitura
@@ -120,12 +120,12 @@ int main(){
 
             vector<string> commandss;
             string commands;
-            
+
             //ta printando en hexadecimal no arquivo
             while(getline(dados_macro, commands)){//le cada linha alterando Mem1 pela primeira variavel e Mem2 pela segunda variavel
                 for(int i=0; i<commands.length(); i++){//pega as posições de espaço e virgula
                         if(commands.at(i) == '1'){
-                            f_out << var1;//var1; 
+                            f_out << var1;//var1;
                         }
                         else if(commands.at(i) == '2'){
                             f_out << var2; //var2;
